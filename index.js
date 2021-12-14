@@ -12,11 +12,6 @@ app.get('/', (req, res) => {
 	res.status(200).send('Heloo Raghav');
 });
 
-app.get('/api/v1/:id', (req, res) => {
-	console.log(req.params.id);
-	res.status(200).json({ param: req.params.id });
-});
-
 app.get('/api/v1/instagram', (req, res) => {
 	const instaSocial = {
 		userName: 'Raghav',
@@ -44,4 +39,9 @@ app.get('/api/v1/linkedin', (req, res) => {
 		date: Date.now(),
 	};
 	res.status(200).json(instaSocial);
+});
+
+app.get('/api/v1/:id', (req, res) => {
+	console.log(req.params.id);
+	res.status(200).json({ param: req.params.id });
 });
